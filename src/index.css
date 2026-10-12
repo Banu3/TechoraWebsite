@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  
+  body {
+    background-color: #EBF5FE;
+    color: #2D425A;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #092342;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Distinctive Editorial Corporate Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #E0F2FE;
+}
+::-webkit-scrollbar-thumb {
+  background: #0284C7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0369A1;
+}
+
+/* Architectural Corporate Grid & Card System */
+.card-enterprise {
+  background-color: #FFFFFF;
+  border: 1px solid #BAE6FD;
+  box-shadow: 0 1px 3px rgba(9, 35, 66, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-enterprise:hover,
+.card-enterprise:focus-within {
+  border-color: #0284C7;
+  box-shadow: 0 12px 28px -6px rgba(2, 132, 199, 0.15);
+  transform: translateY(-2px);
+}
+
+.card-enterprise:hover .card-icon {
+  color: #0284C7;
+  border-color: #0284C7;
+  background-color: #E0F2FE;
+}
+
+/* Technical Accent Line */
+.blueprint-line {
+  background-image: linear-gradient(to right, #BAE6FD 50%, rgba(255, 255, 255, 0) 0%);
+  background-position: top;
+  background-size: 8px 1px;
+  background-repeat: repeat-x;
+}
+
+/* Fullscreen mode optimizations for Enterprise Admin Portal */
+:fullscreen header,
+:-webkit-full-screen header {
+  display: none !important;
+}
+
+:fullscreen section,
+:-webkit-full-screen section {
+  padding-top: 1.5rem !important;
+}
+
